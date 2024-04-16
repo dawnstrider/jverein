@@ -30,7 +30,12 @@ public enum SpendenbescheinigungVar {
   BUCHUNGSLISTE("spendenbescheinigung_buchungsliste"), //
   BEZEICHNUNGSACHZUWENDUNG("spendenbescheinigung_bezeichnungsachzuwendung"), //
   HERKUNFTSACHZUWENDUNG("spendenbescheinigung_herkunftsachzuwendung"), //
-  UNTERLAGENWERTERMITTUNG("spendenbescheinigung_unterlagenwertermittlung");//
+  UNTERLAGENWERTERMITTUNG("spendenbescheinigung_unterlagenwertermittlung"),
+  FINANZAMT("spendenbescheinigung_finanzamt"), //
+  STEUERNUMMER("spendenbescheinigung_steuernummer"), //
+  BESCHEIDDATUM("spendenbescheinigung_bescheiddatum"), //
+  BESCHEID6AAO("spendenbescheinigung_60aao")//
+  ; 
 
   private String name;
 
