@@ -121,7 +121,7 @@ public class AnfangsbestandImpl extends AbstractDBObject
       it.setOrder("order by datum desc");
       if (it.size() > 0)
       {
-        Anfangsbestand anf = (Anfangsbestand) it.next();
+        Anfangsbestand anf =  it.next();
         throw new ApplicationException(
             String.format("Datum muss nach dem %s liegen",
                 new JVDateFormatTTMMJJJJ().format(anf.getDatum())));
@@ -205,7 +205,7 @@ public class AnfangsbestandImpl extends AbstractDBObject
   @Override
   public void setBetrag(double d) throws RemoteException
   {
-    setAttribute("betrag", new Double(d));
+    setAttribute("betrag", Double.valueOf(d));
   }
 
   @Override
@@ -230,7 +230,7 @@ public class AnfangsbestandImpl extends AbstractDBObject
     it.addFilter("bis >= ?", new Object[] { getDatum() });
     if (it.hasNext())
     {
-      Jahresabschluss ja = (Jahresabschluss) it.next();
+      Jahresabschluss ja = it.next();
       return ja;
     }
     return null;
